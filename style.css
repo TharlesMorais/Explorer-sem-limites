@@ -1,0 +1,250 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --color-base-pink: #B52184;
+  --color-base-blue: #312D64;
+  --color-base-white: white;
+  --color-background: #343193;
+}
+
+body, input{
+  color: var(--color-base-blue);
+  font-family: 'Mulish', sans-serif;
+  font-weight: 600;
+}
+
+/* Página inicial */
+main {
+  text-align: center;
+}
+main .smartphone{
+  margin-bottom: 1.7rem;
+}
+main .desktop{
+  display: none;
+}
+main img:hover{
+  cursor: pointer; 
+  filter: hue-rotate(7deg) contrast(101%) saturate(200%);
+}
+h1{
+  color: var(--color-base-pink);
+  font-weight: 900;
+  font-size: 3.2rem;
+}
+p{
+  font-weight: 600;
+  font-size: 2rem;
+  margin-bottom: 3.5rem;
+}
+
+/* Conteúdo da página */
+.content{
+  background: var(--color-background);
+  padding: 5rem 3.9rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container{
+  width: 35.2rem;
+  height: 33.8rem;
+  background: var(--color-base-white);
+  margin-top: 5rem;
+  border-radius: 2rem;
+  padding: 2.6rem;
+}
+.container img {
+  margin-bottom: 3.2rem;
+}
+.container img:hover{
+  cursor: pointer; 
+  filter: hue-rotate(7deg) contrast(101%) saturate(200%);
+  transform: scale(1.1) rotate(-2deg);
+}
+.container h1 {
+  font-size: 2.9rem;
+  margin-bottom: 2rem;
+}
+.container p{
+  font-size: 1.6rem;
+}
+
+/* Contato */
+form{
+  margin: 7.8rem 4rem;
+}
+form h1{
+  margin-bottom: 4.2rem;
+}
+.contact :nth-child(2)  input {
+  background-image: url(./images/person.svg);
+  background-repeat: no-repeat;
+  background-position: left 1.4rem center;
+  width: 34.8rem;
+  height: 4.8rem;
+  border-radius: 1.6rem;
+  margin-bottom: 2.4rem;
+  padding: 1.6rem 4.2rem;
+}
+.contact :nth-child(2) label{
+  visibility: hidden;
+  position: absolute;
+}
+.contact :nth-child(3) input {
+  background-image: url(./images/at.svg);
+  background-repeat: no-repeat;
+  background-position: left 1.4rem center;
+  width: 34.8rem;
+  height: 4.8rem;
+  border-radius: 1.6rem;
+  margin-bottom: 2.4rem;
+  padding: 1.6rem 4.2rem;
+}
+.contact :nth-child(3) label{
+  visibility: hidden;
+  position: absolute;
+}
+.contact :nth-child(4)  input{
+  width: 34.8rem;
+  height: 12.6rem;
+  border-radius: 1.6rem;
+  padding: 1.2rem 1.6rem;
+}
+.contact :nth-child(4) label{
+  visibility: hidden;
+  position: absolute;
+}
+.contact :nth-child(4)  input::placeholder{
+  position: absolute;
+  top: 1.2rem;
+  left: 1.6rem;
+}
+input::placeholder{
+  color: var(--color-base-blue);
+  font-size: 1.6rem;
+}
+button{
+  background: var(--color-background);
+  color: var(--color-base-white);
+  border-radius: 1.6rem;
+  width: 15.1rem;
+  height: 4.5rem;
+  border: none;
+  margin: 2.4rem 4.3rem 6.5rem;
+}
+button:hover{
+  cursor: pointer;
+  filter: hue-rotate(7deg) contrast(101%) saturate(200%);
+}
+.contact .stars{
+  display: none;
+}
+
+
+/* Footer */
+
+footer{
+  background: var(--color-background);
+  height: 7.8rem;
+  padding: 3.2rem 1.6rem;
+  text-align: center;
+}
+footer p {
+  font-size: 2rem;
+  color: var(--color-base-white);
+}
+.arrow, .container img {
+  --delay: .4s;
+  animation: appear .4s var(--delay) backwards;
+}
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+@media(min-width: 1440px) {
+  /* Main */
+  main {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+  }
+  main img{
+    margin: 0;
+    padding: 0;
+  }
+  main .smartphone{
+    display: none;
+  }
+  main .desktop{
+    display: flex;
+    margin: 0;
+    align-items: flex-start;
+  }
+  .text{
+    padding: 31.2rem 0 13.6rem 10.9rem;
+    width: 100vw;
+    text-align: start;
+  }
+  .text h1{
+    font-size: 5.8rem;
+  }
+  .text p{
+    font-size: 3.2rem;
+    margin-bottom: 17.9rem;
+  }
+
+  /* Conteudo */
+  .content{
+    display: flex;
+    flex-direction: row;
+    gap: 6rem;
+    padding: 6.4rem 11.1rem;
+  }
+
+  /* Contato */
+  .contact{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+  .contact form{
+    margin: 9.5rem 10.9rem 0;
+  }
+  .contact .stars{
+    display: block;
+  }
+  .contact h1{
+    font-size: 4.2rem;
+  }
+  .contact :nth-child(2) input{
+    width: 59.2rem;
+  }
+  .contact :nth-child(3) input{
+    width: 59.2rem;
+  }
+  .contact :nth-child(4) input{
+    width: 59.2rem;
+    margin: 0;
+  }
+  button{
+    margin: 2.4rem 0;
+  }
+}
